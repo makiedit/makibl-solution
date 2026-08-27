@@ -41,6 +41,40 @@
     .pay-btn:hover { 
       background-color: #006699; 
     }
+   <!-- የቴሌብር ክፍያ ካርድ -->
+  <div class="pay-card">
+    <h3 style="color: #0088cc; margin-bottom: 10px;">በ Telebirr ክፍያ ለመፈጸም</h3>
+    <p style="color: #555; font-size: 14px; margin-bottom: 15px;">የ QR ኮዱን ስካን ያድርጉ ወይም ቁጥሩን ኮፒ አድርገው ይላኩ</p>
+    
+    <!-- የቴሌብር QR ኮድ ፎቶ -->
+    <img src="telebirr-qr.jpg" alt="Telebirr QR Code" style="width: 180px; height: 180px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 15px;">
+    
+    <div style="background: #f0f8ff; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+      <!-- እዚህ ጋር የራስህን የቴሌብር ቁጥር ፃፍ -->
+      <p style="margin: 0; font-weight: bold;">የቴሌብር ቁጥር፦ <span id="phoneNum" style="color: #0088cc;">09XXXXXXXX</span></p>
+    </div>
+
+    <!-- ኮፒ ማድረጊያ ቁልፍ -->
+    <button class="pay-btn" onclick="copyPhoneNumber()">📋 ቁጥሩን ኮፒ አድርግ</button>
+    
+    <p id="copyMessage" style="color: green; font-size: 13px; margin-top: 8px; display: none;">ቁጥሩ በትክክል ኮፒ ሆኗል!</p>
+  </div>
+
+  <!-- ቁጥሩን ኮፒ የሚያደርገው JavaScript -->
+  <script>
+    function copyPhoneNumber() {
+      // እዚህ ጋርም የራስህን የቴሌብር ቁጥር ፃፍ
+      var phoneNumber = "0934999543"; 
+      
+      navigator.clipboard.writeText(phoneNumber).then(function() {
+        var msg = document.getElementById("copyMessage");
+        msg.style.display = "block";
+        setTimeout(function() {
+          msg.style.display = "none";
+        }, 3000);
+      });
+    }
+  </script>
   </style>
  <style>
   /* የጠቅላላ ገጹ ስታይል */
