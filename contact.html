@@ -3,194 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Makibel Solution - Contact Us</title>
+  <title>Contact Us - Makibel Solution</title>
   <style>
-    /* --- Global Styles --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* --- Header & Navigation --- */
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
-
-    nav h1 {
-      color: #ff4757;
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #555;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #ff4757;
-    }
-
-    /* --- Page Banner --- */
-    .page-banner {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                  url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      height: 40vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    .page-banner h2 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* --- Contact Layout --- */
-    .container {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .contact-info, .contact-form {
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact-info h3, .contact-form h3 {
-      font-size: 1.8rem;
-      color: #2f3542;
-      margin-bottom: 1.5rem;
-    }
-
-    .info-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .info-item h4 {
-      color: #ff4757;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .info-item p {
-      color: #666;
-    }
-
-    /* --- Form Styles --- */
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #2f3542;
-      font-weight: 600;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #ff4757;
-    }
-
-    .submit-btn {
-      width: 100%;
-      background-color: #ff4757;
-      color: #ffffff;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .submit-btn:hover {
-      background-color: #e84118;
-    }
-
-    /* --- Footer --- */
-    footer {
-      background-color: #2f3542;
-      color: #ffffff;
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: 4rem;
-    }
-
-    /* --- Responsive Design --- */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      .page-banner h2 {
-        font-size: 2rem;
-      }
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+    header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; }
+    nav h1 { color: #ff4757; font-size: 1.8rem; font-weight: 700; }
+    nav ul { display: flex; list-style: none; gap: 1.5rem; }
+    nav ul li a { text-decoration: none; color: #555; font-weight: 600; }
+    nav ul li a:hover, nav ul li a.active { color: #ff4757; }
+    .container { max-width: 600px; margin: 3rem auto; padding: 2rem; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    button { background-color: #ff4757; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: 600; width: 100%; }
+    button:hover { background-color: #e03e4d; }
+    footer { background-color: #2f3542; color: #ffffff; text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
   </style>
 </head>
 <body>
@@ -208,88 +37,36 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-banner">
-      <h2>Get In Touch</h2>
-      <p>Have questions or feedback? We are here to help you anytime.</p>
-    </section>
-
-    <div class="container">
-      <div class="contact-wrapper">
-        
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          
-          <div class="info-item">
-            <h4>📍 Location</h4>
-            <p>Addis Ababa, Ethiopia</p>
-          </div>
-
-          <div class="info-item">
-            <h4>📞 Phone</h4>
-            <p>+251 900 000 000</p>
-          </div>
-
-          <div class="info-item">
-            <h4>✉️ Email</h4>
-            <p>support@makibelsolution.com</p>
-          </div>
-
-          <div class="info-item">
-            <h4>⏰ Working Hours</h4>
-            <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <h3>Send Us a Message</h3>
-          <form action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
-
+  <main class="container">
+    <h2>Contact Us</h2>
+    <p style="margin-bottom: 1.5rem;">Send us a message and we will get back to you soon.</p>
+    
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="63004240-6524-4ab5-a28c-206773a9473e" />
+      
+      <div class="form-group">
+        <label for="name">ስም፦</label>
+        <input type="text" id="name" name="name" placeholder="ስምዎን ያስገቡ" required />
       </div>
-    </div>
+
+      <div class="form-group">
+        <label for="email">ኢሜይል፦</label>
+        <input type="email" id="email" name="email" placeholder="ኢሜይልዎን ያስገቡ" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">መልእክት፦</label>
+        <textarea id="message" name="message" rows="5" placeholder="መልእክትዎን እዚህ ይፃፉ..." required></textarea>
+      </div>
+
+      <button type="submit">ላክ (Send)</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2026 Makibel Solution. All rights reserved.</p>
   </footer>
-  <script>
-  // 1. Mobile Menu Toggle (ለሞባይል ሜኑ)
-  const navLinks = document.querySelector('nav ul');
-  
-  // 2. Form Submission Handling (የContact Form መልእክት ሲላክ የሚታይ)
-  const contactForm = document.querySelector('.contact-form form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('እናመሰግናለን! መልእክትዎ በትክክል ደርሶናል፡ በቅርቡ እንመልስልዎታለን።');
-      contactForm.reset();
-    });
-  }
-
-  // 3. Dynamic Copyright Year (የአመተ ምህረቱን አውቶማቲክ ያደርገዋል)
-  const footerText = document.querySelector('footer p');
-  if (footerText) {
-    const currentYear = new Date().getFullYear();
-    footerText.innerHTML = `&copy; ${currentYear} Makibel Solution. All rights reserved.`;
-  }
-</script>
 </body>
 </html>
+
+    
