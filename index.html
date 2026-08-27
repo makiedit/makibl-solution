@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makibel Solution - Home</title>
+  
+  <style>
+    /* --- CSS ዲዛይን (Styles) --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    nav h1 {
+      color: #ff4757;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff4757;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 1rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff4757;
+      color: #ffffff;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #e84118;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #2f3542;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- --- HTML መዋቅር (Structure) --- -->
+  <header>
+    <nav>
+      <h1>Makibel Solution</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ABOUT.html">About Us</a></li>
+        <li><a href="service2.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Fast, Reliable Food Delivery</h2>
+      <p>Delicious meals from your favorite restaurants delivered to your door.</p>
+      <a href="service2.html" class="btn">Explore Services</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Makibel Solution. All rights reserved.</p>
+  </footer>
+
+  <!-- --- JavaScript ተግባራት (Interactivity) --- -->
+  <script>
+    // 1. Dynamic Copyright Year (ዓመተ ምህረቱን በራሱ የሚያስተካክል)
+    const footerText = document.querySelector('footer p');
+    if (footerText) {
+      const currentYear = new Date().getFullYear();
+      footerText.innerHTML = `&copy; ${currentYear} Makibel Solution. All rights reserved.`;
+    }
+  </script>
+
+</body>
+</html>

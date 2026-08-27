@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makibel Solution - FAQ</title>
+  <style>
+    /* --- Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    nav h1 {
+      color: #ff4757;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff4757;
+    }
+
+    /* --- Page Banner --- */
+    .page-banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .page-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* --- FAQ Section --- */
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2f3542;
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid #ff4757;
+    }
+
+    .faq-item h3 {
+      color: #2f3542;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #2f3542;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 4rem;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .page-banner h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Makibel Solution</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to common questions about ordering, delivery, and payments.</p>
+    </section>
+
+    <div class="container">
+      <h2 class="section-title">Common Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Q1: How do I place an order on Makibel Solution?</h3>
+          <p>You can browse our partners' menu on the Services page, choose your desired items, enter your delivery address, and proceed to checkout.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q2: How long does food delivery usually take?</h3>
+          <p>Our average delivery time ranges between 30 to 45 minutes, depending on your distance from the restaurant and traffic conditions.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q3: What payment methods do you support?</h3>
+          <p>We accept cash on delivery, local mobile banking transfers, and major digital wallet payments.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q4: How can my restaurant become a partner?</h3>
+          <p>Go to our Contact Us page, fill out the partnership form or reach out directly to our support team to get started.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Makibel Solution. All rights reserved.</p>
+  </footer><script>
+  // 1. Mobile Menu Toggle (ለሞባይል ሜኑ)
+  const navLinks = document.querySelector('nav ul');
+  
+  // 2. Form Submission Handling (የContact Form መልእክት ሲላክ የሚታይ)
+  const contactForm = document.querySelector('.contact-form form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('እናመሰግናለን! መልእክትዎ በትክክል ደርሶናል፡ በቅርቡ እንመልስልዎታለን።');
+      contactForm.reset();
+    });
+  }
+
+  // 3. Dynamic Copyright Year (የአመተ ምህረቱን አውቶማቲክ ያደርገዋል)
+  const footerText = document.querySelector('footer p');
+  if (footerText) {
+    const currentYear = new Date().getFullYear();
+    footerText.innerHTML = `&copy; ${currentYear} Makibel Solution. All rights reserved.`;
+  }
+</script>
+
+</body>
+</html>

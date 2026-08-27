@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makibel Solution - Testimonials</title>
+  <style>
+    /* --- Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    nav h1 {
+      color: #ff4757;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff4757;
+    }
+
+    /* --- Page Banner --- */
+    .page-banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .page-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* --- Testimonials Section --- */
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2f3542;
+      margin-bottom: 2.5rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stars {
+      color: #ffa502;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-info h4 {
+      color: #2f3542;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .user-info span {
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #2f3542;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 4rem;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .page-banner h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Makibel Solution</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <h2>Customer Testimonials</h2>
+      <p>Read what our happy customers and partners say about our service.</p>
+    </section>
+
+    <div class="container">
+      <h2 class="section-title">What People Say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Makibel Solution has changed how we order lunch at our office. Fast delivery, polite drivers, and the food always arrives hot!"</p>
+          </div>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="user-avatar" />
+            <div class="user-info">
+              <h4>Sara Tadesse</h4>
+              <span>Office Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"As a restaurant owner, partnering with Makibel Solution expanded our customer base significantly. Highly professional ordering workflow!"</p>
+          </div>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Partner Avatar" class="user-avatar" />
+            <div class="user-info">
+              <h4>Abebe Kebede</h4>
+              <span>Restaurant Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars">★★★★☆</div>
+            <p class="testimonial-text">"Super convenient web interface! Placing orders takes less than a minute. Great customer support whenever I have questions."</p>
+          </div>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="user-avatar" />
+            <div class="user-info">
+              <h4>Yonas Alemu</h4>
+              <span>Regular Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Makibel Solution. All rights reserved.</p>
+  </footer>
+</body>
+</html>
