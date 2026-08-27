@@ -1,162 +1,36 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Makibel Solution - Services</title>
+  <title>Food Menu & Order - Makibel Solution</title>
   <style>
-    /* --- Global Styles --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+    header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; }
+    nav h1 { color: #ff4757; font-size: 1.8rem; font-weight: 700; }
+    nav ul { display: flex; list-style: none; gap: 1.5rem; }
+    nav ul li a { text-decoration: none; color: #555; font-weight: 600; }
+    nav ul li a:hover, nav ul li a.active { color: #ff4757; }
+    
+    .container { max-width: 800px; margin: 3rem auto; padding: 2rem; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .menu-header { text-align: center; margin-bottom: 2rem; }
+    .menu-header h2 { font-size: 2.2rem; color: #2f3542; margin-bottom: 0.5rem; }
+    
+    .menu-list { margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1.5rem; }
+    .menu-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px dashed #ddd; }
+    .menu-item span.food-name { font-weight: 600; font-size: 1.1rem; }
+    .menu-item span.price { color: #ff4757; font-weight: bold; }
 
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* --- Header & Navigation --- */
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
-
-    nav h1 {
-      color: #ff4757;
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #555;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #ff4757;
-    }
-
-    /* --- Page Banner --- */
-    .page-banner {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                  url('https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      height: 40vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    .page-banner h2 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* --- Services Grid Section --- */
-    .container {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      color: #2f3542;
-      margin-bottom: 2.5rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background: #ffffff;
-      padding: 2.5rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      border-top: 4px solid #ff4757;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      color: #2f3542;
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .service-card p {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    /* --- Footer --- */
-    footer {
-      background-color: #2f3542;
-      color: #ffffff;
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: 4rem;
-    }
-
-    /* --- Responsive Design --- */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      .page-banner h2 {
-        font-size: 2rem;
-      }
-    }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    
+    button { background-color: #ff4757; color: white; border: none; padding: 1rem; border-radius: 4px; font-size: 1.1rem; cursor: pointer; font-weight: 600; width: 100%; margin-top: 1rem; }
+    button:hover { background-color: #e03e4d; }
+    footer { background-color: #2f3542; color: #ffffff; text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
   </style>
 </head>
 <body>
@@ -166,7 +40,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="services.html" class="active">Services & Menu</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -174,41 +48,83 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-banner">
-      <h2>Our Services</h2>
-      <p>Discover how Makibel Solution simplifies your daily food ordering experience.</p>
-    </section>
+  <main class="container">
+    <div class="menu-header">
+      <h2>የምግብ ዝርዝር እና ማዘዣ (Menu & Order)</h2>
+      <p>የሚፈልጉትን ምግብ መርጠው ይዘዙ፤ በፍጥነት ያሉበት አድራሻ እናደርሳለን!</p>
+    </div>
 
-    <div class="container">
-      <h2 class="section-title">What We Offer</h2>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🍕</div>
-          <h3>Doorstep Food Delivery</h3>
-          <p>Order meals from top-rated local restaurants and get them delivered hot and fresh directly to your office or home.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Express Courier Service</h3>
-          <p>Need urgent food orders or quick package deliveries across the city? Our express delivery team gets it done in record time.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🤝</div>
-          <h3>Restaurant Partnership</h3>
-          <p>We help local restaurants expand their reach, manage online orders, and connect with thousands of active food lovers.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">💳</div>
-          <h3>Flexible Payment Solutions</h3>
-          <p>Enjoy secure cash-on-delivery options alongside smooth digital wallet and local mobile banking integrations.</p>
-        </div>
+    <!-- የምግብ እና ዋጋ ዝርዝር -->
+    <div class="menu-list">
+      <h3>የምግብ አይነቶች እና ዋጋ</h3>
+      <div class="menu-item">
+        <span class="food-name">1. ልዩ ፒዛ (Special Pizza)</span>
+        <span class="price">450 ETB</span>
+      </div>
+      <div class="menu-item">
+        <span class="food-name">2. በርገር ከቺፕስ ጋር (Burger with Fries)</span>
+        <span class="price">350 ETB</span>
+      </div>
+      <div class="menu-item">
+        <span class="food-name">3. ክለብ ሳንድዊች (Club Sandwich)</span>
+        <span class="price">300 ETB</span>
+      </div>
+      <div class="menu-item">
+        <span class="food-name">4. የዶሮ ቁሌት / ቺክን ዊንግስ (Chicken Wings)</span>
+        <span class="price">400 ETB</span>
+      </div>
+      <div class="menu-item">
+        <span class="food-name">5. ለስላሳ መጠጦች (Soft Drinks)</span>
+        <span class="price">50 ETB</span>
       </div>
     </div>
+
+    <!-- የትዕዛዝ መሙያ ፎርም -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="63004240-6524-4ab5-a28c-206773a9473e" />
+      
+      <h3 style="margin-bottom: 1rem;">የትዕዛዝ መረጃ መሙያ</h3>
+
+      <!-- የምግብ አመራረጥ -->
+      <div class="form-group">
+        <label for="food_item">የመረጡት ምግብ፦</label>
+        <select id="food_item" name="food_item" required>
+          <option value="">-- ምግብ ይምረጡ --</option>
+          <option value="Special Pizza - 450 ETB">ልዩ ፒዛ (Special Pizza) - 450 ETB</option>
+          <option value="Burger with Fries - 350 ETB">በርገር ከቺፕስ ጋር (Burger with Fries) - 350 ETB</option>
+          <option value="Club Sandwich - 300 ETB">ክለብ ሳንድዊች (Club Sandwich) - 300 ETB</option>
+          <option value="Chicken Wings - 400 ETB">የዶሮ ቁሌት / Chicken Wings - 400 ETB</option>
+          <option value="Soft Drink - 50 ETB">ለስላሳ መጠጥ - 50 ETB</option>
+        </select>
+      </div>
+
+      <!-- ብዛት -->
+      <div class="form-group">
+        <label for="quantity">ብዛት (Quantity)፦</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+      </div>
+
+      <!-- የደንበኛው ስም -->
+      <div class="form-group">
+        <label for="customer_name">ሙሉ ስም፦</label>
+        <input type="text" id="customer_name" name="customer_name" placeholder="ስምዎን ያስገቡ" required />
+      </div>
+
+      <!-- የደንበኛው ስልክ ቁጥር -->
+      <div class="form-group">
+        <label for="phone">ስልክ ቁጥር፦</label>
+        <input type="tel" id="phone" name="phone" placeholder="09... ወይም 07..." required />
+      </div>
+
+      <!-- የሚገኝበት አድራሻ -->
+      <div class="form-group">
+        <label for="location">የሚገኙበት ቦታ (አድራሻ)፦</label>
+        <textarea id="location" name="location" rows="3" placeholder="ቦታ/ቀበሌ/የቤት ቁጥር ወይም መለያ ምልክት ይጻፉ..." required></textarea>
+      </div>
+
+      <button type="submit">ትዕዛዝ ላክ (Order Now)</button>
+    </form>
   </main>
 
   <footer>
@@ -216,3 +132,4 @@
   </footer>
 </body>
 </html>
+ 
